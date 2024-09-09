@@ -3,26 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/index.css" />
     <title>Weather Search</title>
   </head>
   <body>
-    <h1>Welcome to my weather search app</h1>
-
-    <footer>
-      <p>
-        This project was coded by
-        <a href="https://github.com/NombuK/" target="_blank"
-          >Nombulelo Khumalo</a
-        >
-        with 💜 and is
-        <a href="https://github.com/NombuK/weather-search" target="_blank">
-          on GitHub</a
-        >
-        and
-        <a href="https://main--weather-search-nk.netlify.app/" target="_blank"
-          >hosted on Netlify</a
-        >
-      </p>
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city" required />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <h1>Paris</h1>
+        <div>
+          <p class="current-details">
+            <span id="current-date"></span>Tuesday 13:25, moderate rain <br />
+            Humidity: 87%, Wind: 7.2km/h
+          </p>
+        </div>
+        <div>⛅14°C</div>
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/NombuK/" target="_blank"
+            >Nombulelo Khumalo</a
+          >
+          with 💜 and is
+          <a href="https://github.com/NombuK/weather-search" target="_blank">
+            on GitHub</a
+          >
+          and
+          <a href="https://main--weather-search-nk.netlify.app/" target="_blank"
+            >hosted on Netlify</a
+          >
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
