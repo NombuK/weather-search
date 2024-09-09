@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="src/index.css" />
     <title>Weather Search</title>
@@ -13,20 +16,31 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city" required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            class="search-form-input"
+            type="search"
+            placeholder="Enter a city"
+            required
+          />
+          <input class="search-form-button" type="submit" value="Search" />
         </form>
       </header>
       <main>
-        <h1>Paris</h1>
-        <div>
-          <p class="current-details">
-            <span id="current-date"></span>Tuesday 13:25, moderate rain <br />
-            Humidity: 87%, Wind: 7.2km/h
-          </p>
+        <h1 class="weather-app-city">Paris</h1>
+        <div class="weather-app-data">
+          <div>
+            <p class="weather-app-details">
+              <span id="current-date"></span>Tuesday 13:25, moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon">⛅</div>
+            <div class="weather-app-temperature">14</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
-        <div>⛅14°C</div>
       </main>
       <footer>
         <p>
