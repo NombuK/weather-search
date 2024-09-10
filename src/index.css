@@ -1,5 +1,7 @@
 body {
-  background: #f9f7fe;
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/142/836/original/purple-cloud.jpg?1725951927");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "SUSE", sans-serif;
 }
 
@@ -8,7 +10,9 @@ a {
 }
 
 .weather-app {
-  background: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
   max-width: 600px;
   margin: 45px auto;
   padding: 30px;
@@ -60,9 +64,9 @@ main {
 }
 
 .weather-app-details {
+  color: #f9f7fe;
   font-size: 16px;
   line-height: 24px;
-  color: rgba(39, 33, 66, 0.4);
   font-weight: 500;
 }
 
@@ -94,7 +98,7 @@ main {
 
 .weather-forecast-date {
   text-align: center;
-  color: rgba(39, 33, 66, 0.4);
+  color: #f9f7fe;
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 10px;
@@ -124,5 +128,5 @@ footer {
   padding-top: 30px;
   text-align: center;
   font-size: 15px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
