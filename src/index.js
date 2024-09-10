@@ -9,8 +9,6 @@ function refreshWeather(response) {
   let date = new Date(response.data.time * 1000);
   let iconEl = document.querySelector("#icon");
 
-  console.log(response.data);
-
   timeEl.innerHTML = formatDate(date);
   cityEl.innerHTML = response.data.city;
   temperatureEl.innerHTML = temperature;
@@ -22,6 +20,8 @@ function refreshWeather(response) {
                 alt="icon"
                 class="weather-app-icon"
               />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -66,7 +66,15 @@ searchFormEl.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Norkem Park");
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "4obaa93faa4d0abd12t05933a7d742d3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = " ";
 
@@ -88,5 +96,3 @@ function displayForecast() {
   let forecastEl = document.querySelector("#forecast");
   forecastEl.innerHTML = forecastHtml;
 }
-
-displayForecast();
